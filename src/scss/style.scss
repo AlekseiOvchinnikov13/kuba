@@ -1,6 +1,149 @@
 @import "_vars";
 @import "_global";
 
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-content {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.section-line {
+  border-bottom: 1px solid rgba($color_light_grey, .5);
+}
+
+.header-top {
+  background-image: url(../images/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+.header-top-inner {
+  border: 2px solid $color_gold;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  font-family: "Georgia", sans-serif;
+
+  .header-title {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 227px;
+    margin: auto;
+  }
+
+  .header-text {
+    font-size: 24px;
+    line-height: 27px;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    margin-bottom: -12px;
+
+    &:after, &:before {
+      content: "";
+      border-top: 2px solid $color_gold;
+      width: 100%;
+    }
+
+    &:after {
+      margin-left: 30px;
+    }
+
+    &:before {
+      margin-right: 30px;
+    }
+  }
+}
+
+.menu {
+  border-bottom: 1px solid rgba($color_light_grey, .5);
+}
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .menu-list-link {
+    padding: 24px 10px 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 6px;
+    color: $color-link;
+    border-bottom: 4px solid transparent;
+    transition: all .5s;
+
+    &:hover {
+      border-bottom: 4px solid $color_gold;
+      color: $color_link_hover;
+    }
+  }
+}
+
+.reason {
+  padding: 80px 0 0;
+
+  .reason-title {
+    font-family: Georgia, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 38px;
+    text-align: center;
+    color: $color_link_hover;
+    margin-bottom: 22px;
+  }
+  .reason-text{
+    overflow: hidden;
+    transition: height 200ms;
+  }
+}
+
+.reason-link {
+  text-align: right;
+
+  a {
+    color: $color_gold;
+    margin-bottom: 36px;
+    font-weight: 700;
+  }
+}
+
+.reason-statistics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.reason-statistics-num {
+  margin-top: 33px;
+  color: $color_link_hover;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.reason-statistics-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 0;
+  color: $color_link;
+}
 
 
 @import "_media";

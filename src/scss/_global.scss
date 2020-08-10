@@ -5,9 +5,11 @@ html {
   box-sizing: inherit;
 }
 body{
-  font-family: "Fira Sans", sans-serif;
+  font-family: Lato, sans-serif;
+  color: $color_text;
   font-weight: 400;
   font-size: 16px;
+  line-height: 28px;
   min-width: 320px;
   overflow-x: hidden;
 }
@@ -16,7 +18,7 @@ ul,li{
   list-style-type: none;
 }
 a{
-  color: black;
+  //color: $color_text;
   display: inline-block;
   text-decoration: none;
 }
