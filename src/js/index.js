@@ -1,5 +1,5 @@
-$(function(){
-	/*new WOW({
+$(function () {
+    /*new WOW({
         animateClass: 'animate__animated'
     }).init();*/
     /*$('.header-arrows').on('click', function() {
@@ -11,4 +11,10 @@ $(function(){
         moreLink: '<div class="reason-link container-content"><a href="#">Read More >></a></div>',
         lessLink: '<div class="reason-link container-content"><a href="#">Close</a></div>'
     });
+
+    $('.photo-slider').slick({
+        prevArrow: '<button type="button" class="slick-prev"><img src="images/arrow-left.svg" alt=""></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="images/arrow-right.svg" alt=""></button>'
+    });
+
 });
