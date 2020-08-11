@@ -1,4 +1,159 @@
-@media (max-width: 1440px) {
-  
+@media (max-width: 1080px) {
+  .about-dot-engine {
+    top: 150px;
+    left: 75px;
+  }
+  .about-dot-door {
+    top: 188px;
+    left: 340px;
+  }
+  .about-dot-roof {
+    top: 133px;
+    right: 260px;
+  }
+  .about-dot-wheel {
+    bottom: 28px;
+    right: 200px;
+  }
+  .footer-item-company{
+    padding-left: 0;
+    width: 140px;
+  }
 }
 
+@media (max-width: 840px) {
+  .about-box {
+    margin: 0 auto;
+  }
+  .about-item {
+    padding: 380px 0 70px;
+    background-position: top;
+    margin-bottom: 0;
+  }
+  .about-item:nth-child(even) {
+    background-position: top;
+  }
+  .about-dot{
+    display: none;
+  }
+  .about-images-box{
+    padding-top: 30px;
+  }
+  .footer-items{
+    flex-wrap: wrap;
+  }
+  .footer-item{
+    width: 50%;
+    margin-bottom: 35px;
+    padding-right: 45px;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-top-inner {
+    .header-title {
+      font-size: 120px;
+      line-height: 150px;
+    }
+
+    .header-text {
+      font-size: 20px;
+    }
+  }
+  .menu {
+    position: relative;
+  }
+  .menu-btn {
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    display: block;
+    width: 40px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      margin-bottom: 10px;
+      background-color: $color_gold;
+      height: 4px;
+    }
+  }
+  .menu-list {
+    display: none;
+    padding-top: 60px;
+    text-align: center;
+    border-bottom: 4px solid $color_gold;
+
+    .menu-list-link {
+      display: block;
+      border-top: 4px solid $color_gold;
+      transition: all .5s;
+    }
+  }
+
+  .menu-list {
+    .menu-list-link {
+      &:hover {
+        border-bottom: 4px solid transparent;
+      }
+    }
+  }
+  .slick-next{
+    right: 20px;
+  }
+  .slick-prev{
+    left: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header-top {
+    padding: 10px;
+  }
+  .header-top-inner .header-text {
+    display: none;
+  }
+  .header-top-inner .header-title {
+    font-size: 100px;
+  }
+  .header-top-inner {
+    border: 2px solid $color_gold;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .reason-statistics {
+    display: block;
+  }
+  .reason-statistics-item {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 470px) {
+  .footer-items{
+    display: block;
+  }
+  .footer-item{
+    width: 100%;
+    padding-right: 10px;
+  }
+  .footer{
+    padding-top: 5px;
+  }
+  .photo{
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: 700px) {
+  .menu-list {
+    display: flex !important;
+  }
+}
