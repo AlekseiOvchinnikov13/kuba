@@ -1,17 +1,17 @@
-const gulp = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
-const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
-const del = require('del');
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp'),
+    sourcemaps = require('gulp-sourcemaps'),
+    sass = require('gulp-sass'),
+    concat = require('gulp-concat'),
+    autoprefixer = require('gulp-autoprefixer'),
+    cleanCSS = require('gulp-clean-css'),
+    uglify = require('gulp-uglify'),
+    del = require('del'),
+    browserSync = require('browser-sync').create();
 
-const scssDir = './src/scss/**/*.scss';
-const cssDir = './src/css/**/*.css';
-const jsDir = './src/js/**/*.js';
-const htmlDir = './**/*.html';
+const scssDir = './src/scss/**/*.scss',
+    cssDir = './src/css/**/*.css',
+    jsDir = './src/js/**/*.js',
+    htmlDir = './**/*.html';
 
 //Очистка
 function clean() {
@@ -31,10 +31,10 @@ function sassCompile() {
 function styles() {
     return gulp.src([
         '\\node_modules\\normalize.css\\normalize.css'
-        ,'\\node_modules\\slick-carousel\\slick\\slick.css'
-        ,'\\node_modules\\animate.css\\animate.css'
+        , '\\node_modules\\slick-carousel\\slick\\slick.css'
+        , '\\node_modules\\animate.css\\animate.css'
         //,'\\node_modules\\magnific-popup\\dist\\magnific-popup.css'
-        ,cssDir
+        , cssDir
     ])
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 8 versions']
@@ -50,10 +50,11 @@ function styles() {
 //Сборка всех JS в один файл
 function scripts() {
     return gulp.src([
-        jsDir
-        ,'node_modules/slick-carousel/slick/slick.js'
         //,'node_modules/wow.js/dist/wow.js'
         //,'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+        'node_modules/slick-carousel/slick/slick.js'
+        , 'node_modules/readmore-js/readmore.js'
+        , jsDir
     ])
         .pipe(concat('index.js'))
         .pipe(uglify({
