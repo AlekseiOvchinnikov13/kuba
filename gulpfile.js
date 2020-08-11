@@ -57,9 +57,9 @@ function scripts() {
         , jsDir
     ])
         .pipe(concat('index.js'))
-        /*.pipe(uglify({
+        .pipe(uglify({
             toplevel: true
-        }))*/
+        }))
         .pipe(gulp.dest('./build'))
         .pipe(browserSync.stream());
 }
